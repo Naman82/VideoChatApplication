@@ -15,7 +15,7 @@
         <button id="btn-join">Join Room</button>
     </div>
 
-    <div>
+    <div class="main-grid-container">
         <div id="video-container">
             <div>
                 <video id="local-video" style="float: left;" autoplay playsinline></video>
@@ -23,6 +23,18 @@
             <button id="btn-toggle-audio">Audio Mute</button>
             <button id="btn-toggle-video">Video-Off</button>
         </div>
+
+
+        <div id="chat">
+            <h3>CHAT</h3>
+            <div id="messages">
+                <ul id="message-list"></ul>
+            </div>
+
+            <div><input id="msg"><button id="btn-send-msg">Send Message</button></div>
+            <button id="btn-share-screen">Share Screen</button>
+        </div>
+
     </div>
 
     <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
