@@ -130,3 +130,9 @@ STATICFILES_DIRS=[BASE_DIR,os.path.join(BASE_DIR,'static'),]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ASGI_APPLICATION = 'VideoChat.asgi.application'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
