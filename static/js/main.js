@@ -112,8 +112,8 @@ const constraints ={
 };
 
 const localVideo = document.querySelector('#local-video');
-const bthToggleAudio = document.querySelector('#btn-toggle-audio');
-const bthToggleVideo = document.querySelector('#btn-toggle-video');
+const btnToggleAudio = document.querySelector('#btn-toggle-audio');
+const btnToggleVideo = document.querySelector('#btn-toggle-video');
 
 var userMedia = navigator.mediaDevices.getUserMedia(constraints)
     .then(stream => {
@@ -184,9 +184,9 @@ var userMedia = navigator.mediaDevices.getUserMedia(constraints)
         mapPeers[peerUsername] = [peer, dc];
 
         peer.addEventListener('iceconnectionstatechange',() => {
-            var iceconnectionState = peer.iceConnectionState;
+            var iceConnectionState = peer.iceConnectionState;
 
-            if(iceConnectionState === 'failed' || iceconnectionState === 'disconnected' || iceconnectionState === 'closed'){
+            if(iceConnectionState === 'failed' || iceConnectionState === 'disconnected' || iceConnectionState === 'closed'){
                 delete mapPeers[peerUsername];
 
                 if(iceConnectionState != 'closed'){
