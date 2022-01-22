@@ -184,12 +184,12 @@ var userMedia = navigator.mediaDevices.getUserMedia(constraints)
         mapPeers[peerUsername] = [peer, dc];
 
         peer.addEventListener('iceconnectionstatechange',() => {
-            var iceConnectionState = peer.iceConnectionState;
+            var iceconnectionState = peer.iceConnectionState;
 
-            if(iceConnectionState === 'failed' || iceConnectionState === 'disconnected' || iceConnectionState === 'closed'){
+            if(iceconnectionState === 'failed' || iceconnectionState === 'disconnected' || iceconnectionState === 'closed'){
                 delete mapPeers[peerUsername];
 
-                if(iceConnectionState != 'closed'){
+                if(iceconnectionState != 'closed'){
                     peer.close();
                 }
 
